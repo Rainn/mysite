@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
         <meta charset="utf-8" />
-        <title>Droplet - Authors</title>
+        <title>Command list</title>
         <link rel="stylesheet" href="/theme/css/main.css" />
 
         <!--[if IE]>
@@ -14,14 +14,38 @@
         <header id="banner" class="body">
                 <h1><a href="/">Droplet </a></h1>
                 <nav><ul>
-                    <li><a href="/category/linux.html">Linux</a></li>
+                    <li class="active"><a href="/category/linux.html">Linux</a></li>
                 </ul></nav>
         </header><!-- /#banner -->
-
 <section id="content" class="body">
-    <h1>Authors on Droplet</h1>        <li><a href="/author/sylu.html">sylu</a> (1)</li>
-</section>
+  <article>
+    <header>
+      <h1 class="entry-title">
+        <a href="/command-list.html" rel="bookmark"
+           title="Permalink to Command list">Command list</a></h1>
+    </header>
 
+    <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2014-02-27T00:00:00">
+                Thu 27 February 2014
+        </abbr>
+
+        <address class="vcard author">
+                By <a class="url fn" href="/author/sylu.html">sylu</a>
+        </address>
+<p>In <a href="/category/linux.html">Linux</a>. </p>
+
+</footer><!-- /.post-info -->      <h3>1. 安装Python, Pelican环境</h3>
+<p>virtualenv .env/ --python=python3.3
+source .env/bin/activate</p>
+<h3>2. 生成网站</h3>
+<p>pelican content/ -o output/ -s pelicanconf.py</p>
+<h3>3. 上传Github</h3>
+    </div><!-- /.entry-content -->
+
+  </article>
+</section>
         <section id="extras" class="body">
                 <div class="blogroll">
                         <h2>blogroll</h2>
