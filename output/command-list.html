@@ -58,11 +58,12 @@ git push https://github.com/Rainn/rainn.github.io.git gh-pages:master</p>
 <p>自动部署
 *add following to .git/hooks/post-commit
 "pelican content/ -o output/ -s pelicanconf.py &amp;&amp;
-!ghp-import output/ &amp;&amp;
-git push origin master &amp;&amp;</p>
+ghp-import output/ &amp;&amp;
+git push origin master &amp;&amp;
+!git push origin gh-pages &amp;&amp;
+git push https://github.com/Rainn/rainn.github.io.git gh-pages:master"</p>
 </li>
 </ul>
-<p>git push https://github.com/Rainn/rainn.github.io.git gh-pages:master"</p>
 <h3>总结</h3>
 <ol>
 <li>进入工作目录(mysite)</li>
