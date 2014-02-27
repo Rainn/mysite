@@ -35,8 +35,25 @@
 <p>virtualenv .env/ --python=python3.3
 source .env/bin/activate</p>
 <h3>2. 生成网站</h3>
-<p>pelican content/ -o output/ -s pelicanconf.py</p>
-<h3>3. 上传Github</h3>                </article>
+<p>make html</p>
+<h3>3. 上传Github</h3>
+<p>pelican content/ -o output/ -s pelicanconf.py
+ghp-import output/</p>
+<ul>
+<li>
+<p>Update to [mysite] branch gh-pages
+git push origin gh-pages</p>
+</li>
+<li>
+<p>Update to [rainn.github.io] master
+git push https://github.com/Rainn/rainn.github.io.git gh-pages:master</p>
+</li>
+<li>
+<p>自动部署
+add following to .git/hooks/post-commit
+"pelican content/ -o output/ -s pelicanconf.py &amp;&amp; ghp-import output/ &amp;&amp; git push origin gh-pages &amp;&amp; git push https://github.com/Rainn/rainn.github.io.git gh-pages:master"</p>
+</li>
+</ul>                </article>
 <p class="paginator">
     Page 1 / 1
 </p>
