@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
         <meta charset="utf-8" />
-        <title>Droplet</title>
+        <title>How to make a blog on GitHub</title>
         <link rel="stylesheet" href="/theme/css/main.css" />
 
         <!--[if IE]>
@@ -14,14 +14,70 @@
         <header id="banner" class="body">
                 <h1><a href="/">Droplet </a></h1>
                 <nav><ul>
-                    <li><a href="/category/tech.html">Tech</a></li>
+                    <li class="active"><a href="/category/tech.html">Tech</a></li>
                     <li><a href="/category/travel.html">travel</a></li>
                 </ul></nav>
         </header><!-- /#banner -->
+<section id="content" class="body">
+  <article>
+    <header>
+      <h1 class="entry-title">
+        <a href="/make-blog-github.html" rel="bookmark"
+           title="Permalink to How to make a blog on GitHub">How to make a blog on GitHub</a></h1>
+    </header>
+
+    <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2014-02-27T14:00:00">
+                Thu 27 February 2014
+        </abbr>
+
+        <address class="vcard author">
+                By <a class="url fn" href="/author/shiyu-lu.html">Shiyu Lu</a>
+        </address>
+<p>In <a href="/category/tech.html">Tech</a>. </p>
+<p>tags: <a href="/tag/github.html">GitHub</a><a href="/tag/website.html">website</a></p>
+</footer><!-- /.post-info -->      <h3>1. 安装Python, Pelican环境</h3>
+<p>virtualenv .env/ --python=python3.3
+source .env/bin/activate</p>
+<h3>2. 生成网站</h3>
+<p>make html</p>
+<h3>3. 上传Github</h3>
+<p>pelican content/ -o output/ -s pelicanconf.py
+ghp-import output/</p>
 <ul>
-    <li><a href="/category/tech.html">Tech</a></li>
-    <li><a href="/category/travel.html">travel</a></li>
+<li>
+<p>Update to [mysite] branch gh-pages
+git push origin gh-pages</p>
+</li>
+<li>
+<p>Update to [rainn.github.io] master
+git push https://github.com/Rainn/rainn.github.io.git gh-pages:master</p>
+</li>
+<li>
+<p>自动部署
+add following to .git/hooks/post-commit</p>
+</li>
 </ul>
+<p>"pelican content/ -o output/ -s pelicanconf.py &amp;&amp;
+ghp-import output/ &amp;&amp;
+git push origin master &amp;&amp;
+!git push origin gh-pages &amp;&amp;
+git push https://github.com/Rainn/rainn.github.io.git gh-pages:master"</p>
+<h3>总结</h3>
+<ol>
+<li>进入工作目录(mysite)</li>
+<li>用TextMate等任何喜欢的文本编辑器按照Markdown的方式在[content]目录下写文章</li>
+<li>命令行运行
+git add .
+git commit -m 'comment'
+...(等待Pelican自动编译生成网页，并推送到rainn.github.io)</li>
+</ol>
+<h3>!!! DONE !!! &gt;_&lt;</h3>
+    </div><!-- /.entry-content -->
+
+  </article>
+</section>
         <section id="extras" class="body">
                 <div class="blogroll">
                         <h2>blogroll</h2>
