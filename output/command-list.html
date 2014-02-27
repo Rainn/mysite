@@ -58,20 +58,19 @@ git push https://github.com/Rainn/rainn.github.io.git gh-pages:master</p>
 <p>自动部署
 *add following to .git/hooks/post-commit
 "pelican content/ -o output/ -s pelicanconf.py &amp;&amp;
-ghp-import output/ &amp;&amp;
-git push origin master &amp;&amp;
-git push origin gh-pages &amp;&amp;
-git push https://github.com/Rainn/rainn.github.io.git gh-pages:master"</p>
+!ghp-import output/ &amp;&amp;
+git push origin master &amp;&amp;</p>
 </li>
 </ul>
+<p>git push https://github.com/Rainn/rainn.github.io.git gh-pages:master"</p>
 <h3>总结</h3>
 <ol>
 <li>进入工作目录(mysite)</li>
 <li>用TextMate等任何喜欢的文本编辑器按照Markdown的方式在[content]目录下写文章</li>
 <li>命令行运行
-git add --all
+git add .(如果本地有手动删除的文件，要用--all)
 git commit -m 'comment'
-...(等待Pelican自动编译生成网页，并推送到mysite和rainn.github.io两个站点)</li>
+...(等待Pelican自动编译生成网页，并推送到rainn.github.io)</li>
 </ol>
 <h3>!!! DONE !!! &gt;_&lt;</h3>
     </div><!-- /.entry-content -->
