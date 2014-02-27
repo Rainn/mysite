@@ -51,8 +51,12 @@ git push https://github.com/Rainn/rainn.github.io.git gh-pages:master</p>
 </li>
 <li>
 <p>自动部署
-add following to .git/hooks/post-commit
-"pelican content/ -o output/ -s pelicanconf.py &amp;&amp; ghp-import output/ &amp;&amp; git push origin gh-pages &amp;&amp; git push https://github.com/Rainn/rainn.github.io.git gh-pages:master"</p>
+**add following to .git/hooks/post-commit
+"pelican content/ -o output/ -s pelicanconf.py &amp;&amp;
+ghp-import output/ &amp;&amp;
+git push origin master &amp;&amp;
+git push origin gh-pages &amp;&amp;
+git push https://github.com/Rainn/rainn.github.io.git gh-pages:master"</p>
 </li>
 </ul>
 <h3>总结</h3>
