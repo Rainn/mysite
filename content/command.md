@@ -1,7 +1,10 @@
-Title: Command list
-Date: 2014-02-27
-Category: Linux
-Tag: Pelican, Web
+Title: How to make a blog on GitHub
+Date: 2014-02-27 14:00
+Category: Tech
+Tags: GitHub, website
+Slug: make-blog-github
+Author: Shiyu Lu
+Summary: A short instruction of how to setup pelican website on GitHub
 
 ### 1. 安装Python, Pelican环境
 
