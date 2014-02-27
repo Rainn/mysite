@@ -15,6 +15,7 @@
                 <h1><a href="/">Droplet </a></h1>
                 <nav><ul>
                     <li class="active"><a href="/category/linux.html">Linux</a></li>
+                    <li><a href="/category/travel.html">travel</a></li>
                 </ul></nav>
         </header><!-- /#banner -->
 
@@ -53,7 +54,17 @@ git push https://github.com/Rainn/rainn.github.io.git gh-pages:master</p>
 add following to .git/hooks/post-commit
 "pelican content/ -o output/ -s pelicanconf.py &amp;&amp; ghp-import output/ &amp;&amp; git push origin gh-pages &amp;&amp; git push https://github.com/Rainn/rainn.github.io.git gh-pages:master"</p>
 </li>
-</ul>                </article>
+</ul>
+<h3>总结</h3>
+<ol>
+<li>进入工作目录(mysite)</li>
+<li>用TextMate等任何喜欢的文本编辑器按照Markdown的方式在[content]目录下写文章</li>
+<li>命令行运行
+git add .
+git commit -m 'comment'
+...(等待Pelican自动编译生成网页，并推送到mysite和rainn.github.io两个站点)
+!!! DONE !!! &gt;_&lt;</li>
+</ol>                </article>
 <p class="paginator">
     Page 1 / 1
 </p>

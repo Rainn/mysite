@@ -22,8 +22,12 @@ git push origin gh-pages
 git push https://github.com/Rainn/rainn.github.io.git gh-pages:master
 
 - 自动部署
-add following to .git/hooks/post-commit
-"pelican content/ -o output/ -s pelicanconf.py && ghp-import output/ && git push origin gh-pages && git push https://github.com/Rainn/rainn.github.io.git gh-pages:master"
+**add following to .git/hooks/post-commit
+"pelican content/ -o output/ -s pelicanconf.py &&
+ghp-import output/ &&
+git push origin master &&
+git push origin gh-pages &&
+git push https://github.com/Rainn/rainn.github.io.git gh-pages:master"
 
 ###总结
 1. 进入工作目录(mysite)
